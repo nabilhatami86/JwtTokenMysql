@@ -13,10 +13,13 @@ app.use('/profile', profileRoutes);
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send(
+        "Wellcome To Brilliano API Profile"
+    )
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
